@@ -1,10 +1,17 @@
+/* Project 1
+ * Filename: main.cpp
+ * Names: Anthony Chamoun, Ajinkya Joshi
+ * Email: joshi.aji@northeastern.edu,
+ * Date: Febuary 4th 2023.
+ * contains the main dialogue options of the program
+ */
+
 #include <iostream>
 #include "LockBox.h"
 #include <time.h>
 #include <string>
 #include <vector>
 #include <cstdlib>
-
 using namespace std;
 
 
