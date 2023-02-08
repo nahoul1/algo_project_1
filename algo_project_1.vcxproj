@@ -127,11 +127,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ClientFeedback.cpp" />
     <ClCompile Include="LockBox.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="SmartClient.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ClientFeedback.h" />
     <ClInclude Include="LockBox.h" />
+    <ClInclude Include="SmartClient.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

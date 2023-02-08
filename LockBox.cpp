@@ -1,7 +1,7 @@
 /* Project 1
- * Filename: LockBox.h
+ * Filename: LockBox.cpp
  * Names: Anthony Chamoun, Ajinkya Joshi
- * Email: joshi.aji@northeastern.edu,
+ * Email: joshi.aji@northeastern.edu, chamoun.a@northeastern.edu
  * Date: Febuary 4th 2023.
  * Contains the class implementations of lockbox for part a of the project.
  */

@@ -1,7 +1,7 @@
 /* Project 1
  * Filename: main.cpp
  * Names: Anthony Chamoun, Ajinkya Joshi
- * Email: joshi.aji@northeastern.edu,
+ * Email: joshi.aji@northeastern.edu, chamoun.a@northeastern.edu
  * Date: Febuary 4th 2023.
  * contains the main dialogue options of the program
  */
@@ -71,7 +71,7 @@ int main() {
 
 	
 	for (int i = 0; i < a; i++) {
-		cout << box->getCode()[i] << ", ";
+		cout << box->getCode()[i];
 	}
 
 }
