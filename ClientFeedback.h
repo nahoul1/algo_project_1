@@ -40,20 +40,19 @@ public:
     // setter functions
 
 
-    /* setter function that sets the correctlocation_number to the
+    /* setter function that sets the correct location private data member to the passed integer from smartclient
      * @pre none
-     * @post Initialized guess vector of size n
-     * @param guess vector
+     * @post set correct location is equal to passed integer.
+     * @param correct location number (int)
      * @return none
     */
     void set_correctLocation(int cnl);
 
 
-    /* setCode method takes in the guess vector, clears it of any previous inputs and initializes the size of the vector
-     * to n.
+    /* setter function that sets the incorrect location private data member to the passed integer from smartclient
      * @pre none
-     * @post Initialized guess vector of size n
-     * @param guess vector
+     * @post set incorrect location is equal to passed integer. ne
+     * @param incorrect location number (int)
      * @return none
     */
     void set_incorrectLocation(int incnl);
@@ -61,46 +60,42 @@ public:
 
     //getter functions
 
-    /* setCode method takes in the guess vector, clears it of any previous inputs and initializes the size of the vector
-     * to n.
+    /* getter function returns the value of the correct location
      * @pre none
-     * @post Initialized guess vector of size n
-     * @param guess vector
-     * @return none
+     * @post return value
+     * @param none
+     * @return correctlocation_number
     */
     int get_correctLocation();
 
 
-    /* setCode method takes in the guess vector, clears it of any previous inputs and initializes the size of the vector
-     * to n.
+    /* getter function returns the value of the incorrect location
      * @pre none
-     * @post Initialized guess vector of size n
-     * @param guess vector
-     * @return none
+     * @post return value
+     * @param none
+     * @return correctlocation_number
     */
     int get_incorrectLocation();
 
 
-    /* setCode method takes in the guess vector, clears it of any previous inputs and initializes the size of the vector
+    /* Operator overloading function compares the correct number location to see if its equal to the rhs. Likewise to
+     * the incorrect number location.
      * to n.
      * @pre none
-     * @post Initialized guess vector of size n
-     * @param guess vector
-     * @return none
+     * @post compares the two object integers.
+     * @param object.
+     * @return returns true or false.
     */
     bool operator == (ClientFeedback &rhs);
 
-
-    /* setCode method takes in the guess vector, clears it of any previous inputs and initializes the size of the vector
-     * to n.
-     * @pre none
-     * @post Initialized guess vector of size n
-     * @param guess vector
-     * @return none
-    */
-    void operator << (ClientFeedback & rhs);
-
-
 };
+
+/* Global Operator overload for '<<'
+ * @pre none
+ * @post
+ * @param client feedback object.
+ * @return couts the response.
+*/
+ostream& operator << (ostream& os, ClientFeedback& rhs);
 
 #endif
