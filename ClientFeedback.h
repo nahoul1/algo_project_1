@@ -29,25 +29,75 @@ public:
     /* Constructor method of ClientFeedback initializes the arbitrary correct length number and incorrect length number
      * to 0.
      * @pre none
-     * @post The values are set to 0 and the correct number location and incorrect number locations have been
-     * @param the length and range values.
+     * @post The values are set to 0 and the correct number location and incorrect number locations have been equated
+     * to the correct location number and the incorrect locaton number private data members.
+     * @param correct locatio number and incorrect locatio number.
      * @return none
     */
     ClientFeedback(int c_l_n = 0, int inc_l_n = 0);
 
+
     // setter functions
-    void set_correctLocation(int correctlocation_number);
-    void set_incorrectLocation(int incorrectlocation_number);
+
+
+    /* setter function that sets the correctlocation_number to the
+     * @pre none
+     * @post Initialized guess vector of size n
+     * @param guess vector
+     * @return none
+    */
+    void set_correctLocation(int cnl);
+
+
+    /* setCode method takes in the guess vector, clears it of any previous inputs and initializes the size of the vector
+     * to n.
+     * @pre none
+     * @post Initialized guess vector of size n
+     * @param guess vector
+     * @return none
+    */
+    void set_incorrectLocation(int incnl);
 
 
     //getter functions
+
+    /* setCode method takes in the guess vector, clears it of any previous inputs and initializes the size of the vector
+     * to n.
+     * @pre none
+     * @post Initialized guess vector of size n
+     * @param guess vector
+     * @return none
+    */
     int get_correctLocation();
+
+
+    /* setCode method takes in the guess vector, clears it of any previous inputs and initializes the size of the vector
+     * to n.
+     * @pre none
+     * @post Initialized guess vector of size n
+     * @param guess vector
+     * @return none
+    */
     int get_incorrectLocation();
 
 
+    /* setCode method takes in the guess vector, clears it of any previous inputs and initializes the size of the vector
+     * to n.
+     * @pre none
+     * @post Initialized guess vector of size n
+     * @param guess vector
+     * @return none
+    */
     bool operator == (ClientFeedback &rhs);
 
 
+    /* setCode method takes in the guess vector, clears it of any previous inputs and initializes the size of the vector
+     * to n.
+     * @pre none
+     * @post Initialized guess vector of size n
+     * @param guess vector
+     * @return none
+    */
     void operator << (ClientFeedback & rhs);
 
 

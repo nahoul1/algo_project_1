@@ -17,14 +17,14 @@ ClientFeedback::ClientFeedback(int c_l_n, int inc_l_n):correctlocation_number(c_
     incorrectlocation_number = inc_l_n;
 }
 
-
-void ClientFeedback::set_correctLocation(int n)
+// implementation of set correctLocation
+void ClientFeedback::set_correctLocation(int cnl)
 {
-    correctlocation_number = n;  // setting to n.
+    correctlocation_number = cnl;
 }
-void ClientFeedback::set_incorrectLocation(int inc_n)
+void ClientFeedback::set_incorrectLocation(int incnl)
 {
-    incorrectlocation_number = inc_n;
+    incorrectlocation_number = incnl;
 }
 
 
