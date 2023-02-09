@@ -92,6 +92,9 @@ public:
     */
     int incorrectLocation(LockBox item);
 
+    void setLength(int length);
+    void setRange(int range);
+
 };
 
 #endif

@@ -46,7 +46,13 @@ LockBox SmartClient::clientGuess(vector<int> guess1) {
 
 ClientFeedback SmartClient::getFeedback(LockBox* guess) {
 	ClientFeedback* obj = new ClientFeedback();
-	
+
+	int a, b;
+	a = lock->correctLocation(*guess);
+	b = lock->incorrectLocation(*guess);
+	obj->set_correctLocation(a);
+	obj->set_incorrectLocation(b);
+
 	return *obj;
 }
 
@@ -61,6 +67,7 @@ bool SmartClient::isOpened(ClientFeedback *obj) {
 
 void SmartClient::openLockBox() {
 
+	lock = new LockBox(n, m);
 
 	for (int i = 0; i < n; i++) {
 		cout << lock->getCode()[i] << " ";
@@ -76,14 +83,15 @@ void SmartClient::openLockBox() {
 		guess.push_back(k);
 	}
 
+
 	ClientFeedback* p = new ClientFeedback();
 	LockBox* q = new LockBox;
 
 	*q = clientGuess(guess);
 	*p = getFeedback(q);
 
-
-	while (isOpened(p) == false) {
+	int num = 0;
+	while (isOpened(p) == false && num < 10) {
 		vector<int> guess1;
 		cout << "Enter your guess, one digit at a time: " << endl;
 		for (int i = 0; i < n; i++) {
@@ -91,5 +99,16 @@ void SmartClient::openLockBox() {
 			cin >> k;
 			guess1.push_back(k);
 		}
+		cout << p;
+		*q = clientGuess(guess1);
+		*p = getFeedback(q);
+		num++;
+	}
+
+	if (isOpened(p)) {
+		cout << "This is the correct password!";
+	}
+	else {
+		cout << "Lock box has been disabled.";
 	}
 }

@@ -20,7 +20,7 @@ class SmartClient
 {
 private:
 	int m = 10, n = 5;
-	LockBox* lock = new LockBox(n, m);
+	LockBox* lock;
 public:
 	SmartClient(int range, int length);
 	SmartClient();

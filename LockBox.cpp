@@ -152,3 +152,10 @@ int LockBox::incorrectLocation(LockBox item)
 
 }
 
+void LockBox::setLength(int length) {
+    n = length;
+}
+
+void LockBox::setRange(int range) {
+    m = range;
+}

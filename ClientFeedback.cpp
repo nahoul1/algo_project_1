@@ -54,7 +54,7 @@ bool ClientFeedback::operator == (ClientFeedback &rhs)
 
 void ClientFeedback::operator << (ClientFeedback & rhs)
 {
-    cout<< "Correct number of numbers in the correct location are: " <<
+    cout<< "Correct number of numbers in the correct location are: " << 
     rhs.get_correctLocation() << ". The Incorrect number of numbers in incorrect locations are: " <<
     rhs.get_incorrectLocation() <<
     endl;
