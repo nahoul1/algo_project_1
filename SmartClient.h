@@ -19,14 +19,13 @@ using namespace std;
 class SmartClient
 {
 private:
-	int m, n;
-	LockBox* lock = new LockBox();
+	int m = 10, n = 5;
+	LockBox* lock = new LockBox(n, m);
 public:
 	SmartClient(int range, int length);
 	SmartClient();
-	void printCode();
 	LockBox clientGuess(vector<int> guess1);
-	ClientFeedback getFeedback(vector<int> guess1);
+	ClientFeedback getFeedback(LockBox* guess);
 	bool isOpened(ClientFeedback* obj);
 	void openLockBox();
 };
