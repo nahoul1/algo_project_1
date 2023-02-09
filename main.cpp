@@ -12,6 +12,8 @@
 #include <string>
 #include <vector>
 #include <cstdlib>
+#include "ClientFeedback.h"
+#include "SmartClient.h"
 using namespace std;
 
 
@@ -24,7 +26,13 @@ int main() {
 	cout << "Enter the range of numbers used (0 - m): " << endl << "m = ";
 	cin >> b;
 
+	SmartClient* smart = new SmartClient(a, b);
 
+	smart->openLockBox();
+
+
+}
+	/*
 	LockBox* box = new LockBox(a, b);
 
 	vector<int> guess;
@@ -73,5 +81,4 @@ int main() {
 	for (int i = 0; i < a; i++) {
 		cout << box->getCode()[i];
 	}
-
-}
+	*/
