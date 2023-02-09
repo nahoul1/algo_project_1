@@ -35,19 +35,24 @@ SmartClient::SmartClient() {
 
 
 /*
-*
+* Function takes client guess and creates a lockbox representing it
 * 
 */
 LockBox SmartClient::clientGuess(vector<int> guess1) {
 	LockBox* obj = new LockBox(n, m);
-	obj->setCode(guess1);
+	obj->setCode(guess1); // sets guess code
 	return *obj;
 }
 
+
+/*
+* Takes guess and returns client feedback object
+*/
 ClientFeedback SmartClient::getFeedback(LockBox* guess) {
 	ClientFeedback* obj = new ClientFeedback();
 
 	int a, b;
+	// checks numbers against lock box
 	a = lock->correctLocation(*guess);
 	b = lock->incorrectLocation(*guess);
 	obj->set_correctLocation(a);
@@ -56,7 +61,12 @@ ClientFeedback SmartClient::getFeedback(LockBox* guess) {
 	return *obj;
 }
 
+
+/*
+* checks if the box is opened
+*/
 bool SmartClient::isOpened(ClientFeedback *obj) {
+	// correct location =  total locations
 	if ((obj->get_correctLocation())==n) {
 		return true;
 	}
@@ -65,16 +75,22 @@ bool SmartClient::isOpened(ClientFeedback *obj) {
 	}
 }
 
+/*
+* iteratively gets guess from user and returns feedback, until the guess is correct or the limit is reached
+*/
 void SmartClient::openLockBox() {
 
+	// initilizes
 	lock = new LockBox(n, m);
 
+	// prints code
 	for (int i = 0; i < n; i++) {
 		cout << lock->getCode()[i] << " ";
 	}
 	cout << endl;
 
 
+	// asks for guess
 	vector<int> guess;
 	cout << "Enter your first guess, one digit at a time: " << endl;
 	for (int i = 0; i < n; i++) {
@@ -83,14 +99,17 @@ void SmartClient::openLockBox() {
 		guess.push_back(k);
 	}
 
-
+	// creates objects and calls function
 	ClientFeedback* p = new ClientFeedback();
 	LockBox* q = new LockBox;
-
+	
+	// feedback
 	*q = clientGuess(guess);
 	*p = getFeedback(q);
 	cout << *p;
 	int num = 0;
+
+	// asks for guess until limit is reached or box is opened
 	while (isOpened(p) == false && num < 10) {
 		vector<int> guess1;
 		cout << "Enter your guess, one digit at a time: " << endl;
