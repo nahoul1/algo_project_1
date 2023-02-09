@@ -6,9 +6,9 @@
  * Contains the class implementations of ClientFeedback class for part b of the project.
  */
 
+
 #include "ClientFeedback.h"
 #include "LockBox.h"
-
 
 
 ClientFeedback::ClientFeedback(int c_l_n, int inc_l_n):correctlocation_number(c_l_n), incorrectlocation_number(inc_l_n)
@@ -41,7 +41,7 @@ int ClientFeedback::get_incorrectLocation()
 
 bool ClientFeedback::operator == (ClientFeedback &rhs)
 {
-    if (correctlocation_number == rhs.correctlocation_number)
+    if (correctlocation_number == rhs.correctlocation_number && incorrectlocation_number == rhs.correctlocation_number)
     {
         return true;
     }
@@ -54,8 +54,8 @@ bool ClientFeedback::operator == (ClientFeedback &rhs)
 
 void ClientFeedback::operator << (ClientFeedback & rhs)
 {
-    if (correctlocation_number < rhs.correctlocation_number)
-    {
-        cout<<correctlocation_number << ", " << incorrectlocation_number << endl;
-    }
+    cout<< "Correct number of numbers in the correct location are: " <<
+    rhs.get_correctLocation() << ". The Incorrect number of numbers in incorrect locations are: " <<
+    rhs.get_incorrectLocation() <<
+    endl;
 }

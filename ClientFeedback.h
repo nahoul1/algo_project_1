@@ -16,12 +16,23 @@ using namespace std;
 class ClientFeedback
 {
 
+/*
+ * Private methods of the ClientFeedback class include the output of the lockbox methods that return the number of
+ * correct and incorrect location numbers in the guess.
+*/
 private:
     int correctlocation_number, incorrectlocation_number;
 
 
 public:
 
+    /* Constructor method of ClientFeedback initializes the arbitrary correct length number and incorrect length number
+     * to 0.
+     * @pre none
+     * @post The values are set to 0 and the correct number location and incorrect number locations have been
+     * @param the length and range values.
+     * @return none
+    */
     ClientFeedback(int c_l_n = 0, int inc_l_n = 0);
 
     // setter functions
