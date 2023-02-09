@@ -55,7 +55,7 @@ bool ClientFeedback::operator == (ClientFeedback &rhs)
 ostream& operator << (ostream &os, ClientFeedback& rhs)
 {
     os << "Correct number of numbers in the correct location are: " <<
-    rhs.get_correctLocation() << ". The Incorrect number of numbers in incorrect locations are: " <<
+    rhs.get_correctLocation() << endl << "The Incorrect number of numbers in incorrect locations are: " <<
     rhs.get_incorrectLocation() << endl;
 
     return os;

@@ -89,7 +89,7 @@ void SmartClient::openLockBox() {
 
 	*q = clientGuess(guess);
 	*p = getFeedback(q);
-
+	cout << *p;
 	int num = 0;
 	while (isOpened(p) == false && num < 10) {
 		vector<int> guess1;
@@ -99,9 +99,9 @@ void SmartClient::openLockBox() {
 			cin >> k;
 			guess1.push_back(k);
 		}
-		cout << p;
 		*q = clientGuess(guess1);
 		*p = getFeedback(q);
+		cout << *p;
 		num++;
 	}
 
