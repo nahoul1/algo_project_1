@@ -1,10 +1,12 @@
-/* Project 1
- * Filename: SmartClient.h
- * Names: Anthony Chamoun, Ajinkya Joshi
- * Email: joshi.aji@northeastern.edu, chamoun.a@northeastern.edu
- * Date: Febuary 4th 2023.
- * Contains the class implementations of smartClient for part b of the project.
- */
+/**************************************************************************
+* Project 1 TEAM 2
+* author          :Ajinkya Joshi, Anthony Chamoun
+* Date            :February 4, 2023
+* File name       :SmartClient.cpp
+* Purpose         :Contains the class implementations of smartClient for
+*                  part b of the project.
+ **************************************************************************/
+
 #include <iostream>
 #include "LockBox.h"
 #include "ClientFeedback.h"
@@ -44,6 +46,7 @@ LockBox SmartClient::clientGuess(vector<int> guess1) {
 	return *obj;
 }
 
+
 ClientFeedback SmartClient::getFeedback(LockBox* guess) {
 	ClientFeedback* obj = new ClientFeedback();
 
@@ -56,6 +59,7 @@ ClientFeedback SmartClient::getFeedback(LockBox* guess) {
 	return *obj;
 }
 
+
 bool SmartClient::isOpened(ClientFeedback *obj) {
 	if ((obj->get_correctLocation())==n) {
 		return true;
@@ -64,6 +68,7 @@ bool SmartClient::isOpened(ClientFeedback *obj) {
 		return false;
 	}
 }
+
 
 void SmartClient::openLockBox() {
 

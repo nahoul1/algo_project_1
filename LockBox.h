@@ -1,10 +1,11 @@
-/* Project 1
- * Filename: LockBox.h
- * Names: Anthony Chamoun, Ajinkya Joshi
- * Email: joshi.aji@northeastern.edu, chamoun.a@northeastern.edu
- * Date: Febuary 4th 2023.
- * Contains the class definitions of lockbox for part a of the project.
- */
+/**************************************************************************
+* Project 1 TEAM 2
+* author          :Ajinkya Joshi, Anthony Chamoun
+* Date            :February 4, 2023
+* File name       :LockBox.h
+* Purpose         :Contains the class definitions of lockbox
+*                  for part a of the project.
+ **************************************************************************/
 
 
 #ifndef LOCKBOX_H

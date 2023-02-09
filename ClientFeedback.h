@@ -1,10 +1,13 @@
-/* Project 1
- * Filename: ClientFeedback.h
- * Names: Anthony Chamoun, Ajinkya Joshi
- * Email: joshi.aji@northeastern.edu, chamoun.a@northeastern.edu
- * Date: Febuary 4th 2023.
- * Contains the class definitions of ClientFeedback class for part b of the project.
- */
+/**************************************************************************
+* Project 1 TEAM 2
+* author          :Ajinkya Joshi, Anthony Chamoun
+* Date            :February 4, 2023
+* File name       :ClientFeedback.h
+* Purpose         :Contains the class definitions of ClientFeedback class
+*                  for part b of the project.
+ **************************************************************************/
+
+
 
 #ifndef CLIENTFEEDBACK_H
 #define CLIENTFEEDBACK_H
